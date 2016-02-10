@@ -1,0 +1,21 @@
+<h1><?=$title;?></h1>
+
+<? echo form_open('home/dashboard'); ?>
+<fieldset>
+<legend>Appereance</legend>
+<table>
+<? foreach($data->result() as $t){} ?>
+<input type="hidden" name="id" value="<? echo $t->id;?>">
+<tr valign='top'><td width='200px' valign='top'>Show data perPage</td><td>:</td><td><input type='text' name='limited' value='<? echo $t->limit_page;?>' class='inputspan2'></td></tr>
+<tr valign='top'><td width='200px' valign='top'>Default Email Sender</td><td>:</td><td><input type='text' name='emailsender' value='<? echo $t->email_def_acc;?>'></td></tr>
+<tr valign='top'><td width='200px' valign='top'>Email Confirmation Password</td><td>:</td><td><textarea name='email_conf_pass' id='editor1' class='ckeditor'><? echo $t->email_conf_pass;?></textarea></td></tr>
+<tr valign='top'><td width='200px' valign='top'>Email Notification Return</td><td>:</td><td><textarea name='email_notif' id='editor1' class='ckeditor'><? echo $t->email_warn;?></textarea></td></tr>
+
+
+</table>
+</fieldset>
+
+<input type='submit' name='save' value='Save'>
+
+<? echo form_close(); ?>
+

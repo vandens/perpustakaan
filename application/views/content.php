@@ -1,0 +1,1 @@
+<h1>Welcome <?php echo ucfirst($this->session->userdata('user')); ?></h1>

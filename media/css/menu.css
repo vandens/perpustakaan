@@ -1,0 +1,25 @@
+
+.menu ul li.active{ /*IE6 hack- hide gooey effect from that browser*/
+_visibility: hidden; /*IE6 rule*/
+}
+.menu{ 
+position:fixed; width:100%; height:45px;  font-size:14px; 
+box-shadow: 3px 3px 8px #818181; color:white;
+background-image:url('http://perpustakaan.dev/media/img/grad.gif');
+background-repeat:repeat-x;
+
+-webkit-box-shadow: 3px 3px 8px #818181;
+-moz-box-shadow: 3px 3px 8px #818181;
+margin-top:-50px;
+}
+ul.menubutton{ padding-left:75px; margin-bottom:1em; margin-top:1em; }
+ul.menubutton li{ display: inline; padding-right:25px; }
+ul.menubutton li a{ text-decoration:none; color:white;}
+ul.menubutton li a:hover{ color:yellow;}
+ul.menubutton li.active{
+position:absolute;
+width:100%;
+border-bottom:5px solid navy;
+}
+
+.logo{ position:absolute; float:left;}
